@@ -1,0 +1,38 @@
+
+CR 
+1) intead of calling getBooks() inside renderBook() all the time I
+will just put getBooks() inside renderBook()
+2) onCreateBook() --> change the name to onShowCreateBookModal(), 
+because we only showing our modal
+3) onCreateBookReady() --> change the name to onCreateBook()
+4) onUpdateBook() --> change the name to onShowUpdateBookModal(),
+because we only showing our modal
+5) onUpdateBookReady() --> change the name to onUpdateBook()
+6) var bookObj = { name: document.querySelector('.name-input').value
+, price: document.querySelector('.price-input').value }; --> 
+first its a very long sentence which is hard to read, second
+contorller should not bulid objects, just send arguments to 
+book.sercies and book.services can bulid object if needed
+7) onCreateBook & onUpdateBook() should only send arguments to 
+createBook () & updateBook() at the book.serices and render, 
+it should not do more document.querySelector, and manipulations code, 
+that should happen at onShowUpdateBookModal() & onShowCreateBookModal()
+8) onSort() --> not clear, the click should on price div or title div
+and not on titls div (all row), or I could have used two buttons for
+that, or I could put a select option
+9) gIsSortByName --> should be somehow deleted, or it should be at the
+book.services and not in the controller, if I fix comment (8) then I
+dont need this vairable
+10) paging --> onPageNext() and onPagePrev() should not contain gPage,
+and they should not know about it, they should just call function at
+the book.services, controller should not know about variables in the
+book.serives, it should just get data and send data to it by
+functions. so there should be distinct seperation between
+controller and book.serices
+11) flex of books-container will not change its size!! this is due to
+the images of the book which dont let the flex-grow sizes to work,
+therefore I can set flex-grow to change size
+12) align-items would not work!! because each div contains just text
+in it, and flex is working only on elements, therefore flex cannot
+catch the text, in order to center by align-items i should put all
+the text in <span> which is an elements which flex can handle

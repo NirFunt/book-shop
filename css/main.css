@@ -1,0 +1,169 @@
+
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+}
+
+.create-btn {
+    position: relative;
+    left:9%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 1%;
+    background-color: green;
+    cursor: pointer;
+}
+
+.books-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    background-color: aquamarine;
+    margin: auto;
+    text-align: center;
+    border: 2px solid red;
+}
+
+.books-container button {
+    border-radius: 50%;
+    border: brown 3px solid;
+    padding: 7%;
+    margin: 8%;
+    background-color: lightsalmon;
+    cursor: pointer;
+}
+
+.books-container img {
+    width: 15vw;
+}
+
+.titles {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.titles div {
+    padding: 5px;
+    font-size: 1.5rem;
+    flex: 1;
+    border: 2px solid blue;
+    border-collapse: collapse;
+}
+
+.books-content { 
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+}
+
+.book {
+    display: flex;
+    flex-direction: row;
+}
+
+.book div {
+    flex: 1;
+    border: 2px solid blue;
+    border-collapse: collapse;
+}
+
+.move-pages button {
+    margin-top: 1%;
+    position: relative;
+    left: 10%;
+    padding: 0.1%;
+    font-size: 200%;
+    cursor:pointer;
+}
+
+.book-details {
+    width: 70%;
+    display: none;
+    position: fixed;
+    right: 15vw;
+    top: 20vh;
+    z-index: 3;
+   background-color: rgb(167, 112, 117);
+   padding: 2%;
+}
+
+.book-details img {
+    width: 30%;
+    float: left;
+}
+
+.close-modal-btn {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 10%;
+    height: 9%;
+}
+
+.book-rate {
+    width: 15%;
+    height: 0%;
+    clear:both;
+    padding: 0% 0% 2% 3%;
+    background-color: rgb(146, 112, 112);
+    margin-top: 10px;
+}
+
+.book-rate h3 {
+    position: relative;
+    left: 5%;
+    top: 10px;
+}
+
+.book-rate button {
+    background-color: rebeccapurple;
+    margin-bottom: 10%;
+    height: 35px;
+    width: 50px;
+}
+
+.create-new-modal {
+    position: relative;
+    padding: 2% 7%;
+    background-color: blue;
+    position: fixed;
+    left: 20%;
+    display: none;
+}
+
+.create-new-modal .close-create-btn {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    background-color: brown;
+}
+
+.update-modal {
+    background-color: burlywood;
+    display: none;
+    position: fixed;
+    top:30%;
+    left: 25%;
+    padding: 2% 2% 3% 3%;
+}
+
+.close-update-btn {
+    position: absolute;
+    right: 0%;
+    top: 0;
+    background-color: chocolate;
+}
+
+.book-title-header:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.price-title-header:hover {
+    cursor: pointer;
+    background-color: red;
+}
